@@ -164,6 +164,39 @@ function initSliders() {
       },
     })
   }
+  if (document.querySelector(".reviews__slider")) {
+    new Swiper(".reviews__slider", {
+      modules: [Navigation],
+      observer: true,
+      observeParents: true,
+
+      speed: 500,
+      loop: true,
+
+      navigation: {
+        prevEl: ".reviews .button-prev",
+        nextEl: ".reviews .button-next",
+      },
+
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          autoHeight: true,
+        },
+        600: {
+          slidesPerView: 1.5,
+          spaceBetween: 20,
+          autoHeight: false,
+        },
+        991: {
+          slidesPerView: 2,
+          spaceBetween: 32,
+          autoHeight: false,
+        },
+      },
+    })
+  }
 }
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {

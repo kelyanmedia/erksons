@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+
+			<section class="hero">
+				<div class="hero__slider swiper">
+					<div class="hero__wrapper swiper-wrapper">
+						<div class="hero__slide slide-hero swiper-slide">
+							<h2 class="slide-hero__title">ERKSONS</h2>
+							<div class="slide-hero__text">
+								<p>Семейная компания, основанная на принципах качества, надежности и профессионализма</p>
+							</div>
+							<div class="slide-hero__bg-ibg">
+								<img src="@img/hero/02.jpg" alt="" loading="lazy">
+								<div class="preloader"></div>
+							</div>
+						</div>
+					</div>
+					<div class="hero__pagination pagination"></div>
+				</div>
+				<a href="#" class="hero__button button">Направления работы</a>
+			</section>
+
+			<section class="history">
+				<div class="history__container">
+					<div class="history__body">
+						<div class="history__main">
+							<h2 class="history__title title title_white">Наша история</h2>
+							<div class="history__text text text_white">За годы работы мы достигли множества значимых успехов. Мы гордимся нашими достижениями, но идем дальше, стремясь
+								к новым вершинам и вызовам.</div>
+						</div>
+						<div class="history__content">
+							<div class="history__point point-history">
+								<div class="point-history__date">Year • Month</div>
+								<h5 class="point-history__title">Summary of event</h5>
+								<div class="point-history__text">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										Suspendisse varius enim in eros elementum tristique.</p>
+								</div>
+							</div>
+							<div class="history__point point-history">
+								<div class="point-history__date">Year • Month</div>
+								<h5 class="point-history__title">Summary of event</h5>
+								<div class="point-history__text">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										Suspendisse varius enim in eros elementum tristique.</p>
+								</div>
+							</div>
+							<div class="history__point point-history">
+								<div class="point-history__date">Year • Month</div>
+								<h5 class="point-history__title">Summary of event</h5>
+								<div class="point-history__text">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										Suspendisse varius enim in eros elementum tristique.</p>
+								</div>
+							</div>
+							<div class="history__point point-history">
+								<div class="point-history__date">Year • Month</div>
+								<h5 class="point-history__title">Summary of event</h5>
+								<div class="point-history__text">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										Suspendisse varius enim in eros elementum tristique.</p>
+								</div>
+							</div>
+							<div class="history__point point-history">
+								<div class="point-history__date">Year • Month</div>
+								<h5 class="point-history__title">Summary of event</h5>
+								<div class="point-history__text">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										Suspendisse varius enim in eros elementum tristique.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="text-block">
+				<div class="text-block__container">
+					<div class="text-block__body">
+						<h2 class="text-block__title title">Наша миссия</h2>
+						<div class="text-block__text text">
+							<p>Мы стремимся быть ведущими в своей отрасли, предоставляя клиентам высококачественные продукты и услуги, ориентированные на их потребности и ожидания.
+								Наша цель - создать ценность для наших клиентов и партнеров.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="valuation">
+				<div class="valuation__container">
+					<h2 class="valuation__title title">Наши ценности</h2>
+					<div class="valuation__items">
+						<div class="valuation__item item-content">
+							<div class="item-content__circle"></div>
+							<h4 class="item-content__title">Семейная репутация </h4>
+							<div class="item-content__text">
+								<p>Гордимся тем, что являемся семейным бизнесом, и считаем семейные ценности основой нашего успеха</p>
+							</div>
+						</div>
+						<div class="valuation__item item-content">
+							<div class="item-content__circle"></div>
+							<h4 class="item-content__title">Профессионализм </h4>
+							<div class="item-content__text">
+								<p>Ценим высокие стандарты профессионализма и стремимся к непрерывному совершенствованию наших навыков и знаний</p>
+							</div>
+						</div>
+						<div class="valuation__item item-content">
+							<div class="item-content__circle"></div>
+							<h4 class="item-content__title">Надежность и качество</h4>
+							<div class="item-content__text">
+								<p>Являются основополагающими принципами нашего бизнеса. Стремимся к постоянному улучшению качества наших продуктов и услуг</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			@@include('html/_cooperate.htm',{})
+
+			@@include('html/_team.htm',{})
+
+			<section class="reviews">
+				<div class="reviews__container">
+					<div class="reviews__body">
+						<div class="reviews__top">
+							<h2 class="reviews__title title">Отзывы наших партнеров</h2>
+							<div class="reviews__navigation navigation">
+								<button class="navigation__button button-prev _icon-prev"></button>
+								<button class="navigation__button button-next _icon-next"></button>
+							</div>
+						</div>
+						<div class="reviews__slider swiper">
+							<div class="reviews__wrapper swiper-wrapper">
+								<div class="reviews__slide slide-reviews swiper-slide">
+									<div class="slide-reviews__logo"><img src="@img/reviews/01.svg" alt="" loading="lazy"></div>
+									<div class="slide-reviews__text">
+										<p>"A customer testimonial that highlights features and answers potential customer doubts about your product or service. Showcase testimonials from a similar demographic to your customers."</p>
+									</div>
+								</div>
+								<div class="reviews__slide slide-reviews swiper-slide">
+									<div class="slide-reviews__logo"><img src="@img/reviews/02.svg" alt="" loading="lazy"></div>
+									<div class="slide-reviews__text">
+										<p>"A customer testimonial that highlights features and answers potential customer doubts about your product or service. Showcase testimonials from a similar demographic to your customers."</p>
+									</div>
+								</div>
+								<div class="reviews__slide slide-reviews swiper-slide">
+									<div class="slide-reviews__logo"><img src="@img/reviews/01.svg" alt="" loading="lazy"></div>
+									<div class="slide-reviews__text">
+										<p>"A customer testimonial that highlights features and answers potential customer doubts about your product or service. Showcase testimonials from a similar demographic to your customers."</p>
+									</div>
+								</div>
+								<div class="reviews__slide slide-reviews swiper-slide">
+									<div class="slide-reviews__logo"><img src="@img/reviews/02.svg" alt="" loading="lazy"></div>
+									<div class="slide-reviews__text">
+										<p>"A customer testimonial that highlights features and answers potential customer doubts about your product or service. Showcase testimonials from a similar demographic to your customers."</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			@@include('html/_cooperate.htm',{})
+
+			<!--
+				<section class="test">
+					<div class="test__container">
+						<div class="test__body">
+
+						</div>
+					</div>
+				</section>
+			-->
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

@@ -57,6 +57,25 @@
   }
 }
 
+.navigation {
+  display: flex;
+  @include adaptiveValue("gap", 20, 10);
+  &__button {
+    @include adaptiveValue("font-size", 40, 35);
+    transition: color 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #ffbc0f;
+      }
+    }
+    .button-prev {
+    }
+
+    .button-next {
+    }
+  }
+}
+
 //========================================================================================================================================================
 .title {
   font-family: "Times New Roman";

@@ -1,6 +1,7 @@
 //====================================================================================================
 
 .footer {
+  @include adaptiveValue("margin-top", 50, 40);
   @include adaptiveValue("padding-top", 50, 40);
   @include adaptiveValue("padding-bottom", 50, 40);
   background-color: #383838;
@@ -65,6 +66,12 @@
   align-items: center;
   gap: toRem(16);
   &__link {
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
   }
 }
 
