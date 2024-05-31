@@ -1,0 +1,139 @@
+.blog {
+  @include adaptiveValue("padding-top", 140, 100);
+  @include adaptiveValue("padding-bottom", 75, 30);
+  &__container {
+    display: grid;
+
+    max-width: toRem(1342);
+  }
+
+  &__title {
+    font-weight: 400;
+    @include adaptiveValue("font-size", 60, 30);
+    line-height: 110%;
+    text-align: center;
+    color: #000;
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 50, 30);
+    }
+  }
+
+  &__items {
+    display: grid;
+    column-gap: toRem(20);
+    @include adaptiveValue("row-gap", 50, 30);
+
+    @media (min-width: $mobile) {
+      grid-template-columns: repeat(auto-fill, minmax(toRem(380), 1fr));
+    }
+  }
+
+  &__item {
+  }
+
+  &__button {
+    font-family: Manrope;
+    height: 43px;
+    border-radius: toRem(5);
+    justify-self: center;
+    @include adaptiveValue("margin-top", 50, 30);
+    color: #f5f5f5;
+  }
+}
+.item-blog {
+  &__image-ibg {
+    border-radius: 12px;
+    display: block;
+    overflow: hidden;
+    padding-bottom: percent(300, 425);
+    @include adaptiveValue("margin-bottom", 25, 15);
+
+    @media (any-hover: hover) {
+      &:hover {
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    img {
+      transition: transform 0.3s ease 0s;
+    }
+  }
+
+  &__title {
+    @include adaptiveValue("font-size", 18, 16);
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #383838;
+    margin-bottom: toRem(8);
+
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #ffbc0f;
+      }
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: toRem(16);
+    line-height: 150%;
+    color: #383838;
+  }
+}
+
+//========================================================================================================================================================
+
+.article-blog {
+  @include adaptiveValue("padding-top", 125, 100);
+  @include adaptiveValue("padding-bottom", 100, 30);
+
+  font-weight: 400;
+  @include adaptiveValue("font-size", 18, 16);
+  line-height: 150%;
+  color: #383838;
+
+  &__container {
+    max-width: toRem(830);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+    @include adaptiveValue("font-size", 26, 22);
+    line-height: 120%;
+    color: #383838;
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 25, 15);
+    }
+  }
+
+  h1 {
+    @include adaptiveValue("font-size", 30, 24);
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+
+    margin-top: toRem(30);
+    @include adaptiveValue("margin-bottom", 50, 25);
+  }
+
+  p {
+    &:not(:last-child) {
+      margin-bottom: toRem(15);
+    }
+  }
+  b {
+    font-size: toRem(20);
+  }
+}

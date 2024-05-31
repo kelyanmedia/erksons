@@ -304,6 +304,10 @@
   display: flex;
   flex-direction: column;
 
+  &_big {
+    grid-column: 1 / -1;
+  }
+
   &__circle {
     background-color: #ffbc0f;
     border-radius: 50%;
