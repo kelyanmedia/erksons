@@ -7,7 +7,7 @@
   align-items: center;
   border-radius: 20px;
   padding: 10px 20px;
-  height: 43px;
+  @include adaptiveValue("height", 51, 45);
   background-color: #ffbc0f;
   border: 1px solid #ffbc0f;
 

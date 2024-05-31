@@ -197,6 +197,88 @@ function initSliders() {
       },
     })
   }
+  for (const mobileSlider of document.querySelectorAll(".products__items")) {
+    if (mobileSlider) {
+      ;(function () {
+        "use strict"
+
+        const breakpoint = window.matchMedia("(min-width:768px)")
+        let slider
+
+        const enableSwiper = function () {
+          slider = new Swiper(mobileSlider, {
+            modules: [Navigation],
+            observer: true,
+            observeParents: true,
+            speed: 300,
+            loop: true,
+            lazyPreloaderClass: "preloader",
+
+            navigation: {
+              prevEl: ".products__navigation .button-prev",
+              nextEl: ".products__navigation .button-next",
+            },
+
+            breakpoints: {
+              320: {
+                slidesPerView: 1.25,
+                spaceBetween: 15,
+              },
+              767: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+            },
+          })
+        }
+
+        const breakpointChecker = function () {
+          if (breakpoint.matches === true) {
+            if (slider !== undefined) slider.destroy(true, true)
+
+            return
+          } else if (breakpoint.matches === false) {
+            return enableSwiper()
+          }
+        }
+
+        breakpoint.addListener(breakpointChecker)
+        breakpointChecker()
+      })()
+    }
+  }
+
+  if (document.querySelector(".prodject__slider")) {
+    new Swiper(".prodject__slider", {
+      modules: [Navigation],
+      observer: true,
+      observeParents: true,
+      lazyPreloaderClass: "preloader",
+
+      speed: 500,
+      loop: true,
+
+      navigation: {
+        prevEl: ".prodject .button-prev",
+        nextEl: ".prodject .button-next",
+      },
+
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        600: {
+          slidesPerView: 1.5,
+          spaceBetween: 20,
+        },
+        991: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+      },
+    })
+  }
 }
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {

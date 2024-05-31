@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <section class="hero">
+                <div class="hero__slider swiper">
+                    <div class="hero__wrapper swiper-wrapper">
+                        <div class="hero__slide slide-hero swiper-slide">
+                            <h2 class="slide-hero__title">Дистрибьюция</h2>
+                            <div class="slide-hero__text">
+                                <p> Предлагаем широкий спектр товаров в различных отраслях</p>
+                            </div>
+                            <div class="slide-hero__bg-ibg">
+                                <img src="@img/hero/03.jpg" alt="" loading="lazy">
+                                <div class="preloader"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero__pagination pagination"></div>
+                </div>
+                <a href="#" class="hero__button button">Направления работы</a>
+            </section>
+
+            @@include('html/_products.htm',{
+            "title":"Кофе",
+            "text":"Мы предлагаем широкий ассортимент кофейных зерен и молотого кофе от ведущих мировых производителей"
+            })
+
+            @@include('html/_products.htm',{
+            "title":"Пломбы",
+            "text":"Предлагаем широкий ассортимент высококачественных промышленных пломб,предназначенных для использования в различных отраслях"
+            })
+
+            @@include('html/_products.htm',{
+            "title":"Краны",
+            "text":"Наша продукция отвечает самым строгим стандартам безопасности и качества, обеспечивая надежность и долговечность в эксплуатации"
+            })
+
+            <section class="choose">
+                <div class="choose__container">
+                    <div class="choose__header section-header">
+                        <div class="section-header__title title">Также предлагаем для вас</div>
+                    </div>
+                    <div class="choose__items">
+                        <div class="choose__item item-content">
+                            <div class="item-content__circle"></div>
+                            <h4 class="item-content__title">Металлопрокат</h4>
+                            <div class="item-content__text">
+                                <p>Поставляем металлопрокат высокого качества для различных отраслей промышленности. Наш ассортимент включает в себя стальные листы, балки, трубы и другие металлические изделия.</p>
+                            </div>
+                            <a href="#" class="item-content__link button">Узнать подробней</a>
+                        </div>
+                        <div class="choose__item item-content">
+                            <div class="item-content__circle"></div>
+                            <h4 class="item-content__title">Логистика</h4>
+                            <div class="item-content__text">
+                                <p>Предоставляем профессиональные услуги
+                                    по автотранспортировке грузов. Мы оснащены современный и безопасным автопарком грузовых автомобилей.</p>
+                            </div>
+                            <a href="#" class="item-content__link button">Узнать подробней</a>
+                        </div>
+                        <div class="choose__item item-content">
+                            <div class="item-content__circle"></div>
+                            <h4 class="item-content__title">Технология RFID</h4>
+                            <div class="item-content__text">
+                                <p>RFID-маркировка - это инновационная технология идентификации и отслеживания товаров с использованием радиочастотных меток (RFID).</p>
+                            </div>
+                            <a href="#" class="item-content__link button">Узнать подробней</a>
+                        </div>
+                        <div class="choose__item item-content">
+                            <div class="item-content__circle"></div>
+                            <h4 class="item-content__title">ВГП</h4>
+                            <div class="item-content__text">
+                                <p>Мы предлагаем высококачественные материалы для строительства
+                                    и обслуживания водогазопроводов (ВГП). </p>
+                            </div>
+                            <a href="#" class="item-content__link button">Узнать подробней</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            @@include('html/_cooperate.htm',{})
+
+            <!--
+				<section class="test">
+					<div class="test__container">
+						<div class="test__body">
+
+						</div>
+					</div>
+				</section>
+			-->
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>
