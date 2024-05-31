@@ -135,6 +135,10 @@
   &__item {
     position: relative;
 
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+
     &:hover {
       @media (min-width: $mobile) {
         .menu__sublist {
