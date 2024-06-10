@@ -89,7 +89,7 @@
   }
 
   &__title {
-    font-family: "Times New Roman";
+    font-family: "Manrope";
     font-style: italic;
     font-weight: 400;
     @include adaptiveValue("font-size", 30, 24);
@@ -130,7 +130,7 @@
   }
 
   &__title {
-    font-family: "Times New Roman";
+    font-family: "Manrope";
     font-style: italic;
     font-weight: 400;
     @include adaptiveValue("font-size", 30, 25);
