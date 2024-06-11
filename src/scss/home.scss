@@ -59,7 +59,7 @@
   padding-right: toRem(15);
   &__title {
     font-family: "Manrope";
-    font-style: italic;
+    // font-style: italic;
     font-weight: 400;
     @include adaptiveValue("font-size", 200, 45);
     line-height: 100%;
@@ -72,7 +72,7 @@
 
   &__sub-title {
     font-family: "Manrope";
-    font-style: italic;
+    // font-style: italic;
     font-weight: 400;
     @include adaptiveValue("font-size", 100, 40);
     line-height: 100%;
