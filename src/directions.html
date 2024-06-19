@@ -28,6 +28,38 @@
                 <a href="#" class="hero__button button">Направления работы</a>
             </section>
 
+            <div class="submit">
+                <div class="submit__container">
+
+                    <div class="submit__body">
+                        <div class="submit__inner">
+                            <h6 class="submit__title">Нужен металлопрокат <br> для вашего проекта? </h6>
+                            <div class="submit__text">Заполните форму, и начнем работать вместе! <br>
+                                После заполнения формы наш менеджер свяжется с вами <br> для уточнения деталей и составления точной сметы.</div>
+                        </div>
+                        <form action="#" class="submit__form form-popup">
+                            <div class="form-popup__input-block">
+                                <input autocomplete="off" type="text" name="form[]" placeholder="Имя" class="form-popup__input input-big">
+                            </div>
+                            <div class="form-popup__input-block">
+                                <div class="form-popup__flag"><img src="@img/uz-flag.jpg" alt="" loading="lazy"></div>
+                                <input autocomplete="off" type="text" name="form[]" placeholder="+998 999-99-99" class="form-popup__input input-big">
+                            </div>
+                            <select name="form[]" class="form" class="form-popup__select">
+                                <option value="" selected>Какой запрос?</option>
+
+                                <option value="1">Пункт №1</option>
+                                <option value="2">Пункт №2</option>
+                                <option value="3">Пункт №3</option>
+                                <option value="4">Пункт №4</option>
+                            </select>
+                            <button class="form-popup__button button">Получить консультацию</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
             @@include('html/_products.htm',{
             "title":"Кофе",
             "text":"Мы предлагаем широкий ассортимент кофейных зерен и молотого кофе от ведущих мировых производителей"
