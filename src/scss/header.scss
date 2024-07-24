@@ -229,7 +229,7 @@
       transition: all 0.3s ease 0s;
       // border-radius: toRem(10);
       max-height: toRem(220);
-      overflow-y: auto;
+      // overflow-y: auto;
       pointer-events: none;
       visibility: hidden;
       opacity: 0;
@@ -239,12 +239,108 @@
   }
 
   &__subitem {
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: toRem(5);
+    }
+
+    &:hover {
+      @media (min-width: $mobile) {
+        .menu__sublist-sub {
+          // top: calc(100% + toRem(10));
+          pointer-events: all;
+          visibility: visible;
+          opacity: 1;
+        }
+
+        &::before {
+          content: "";
+
+          position: absolute;
+          width: toRem(25);
+          height: 150%;
+          top: -25%;
+          left: 100%;
+          // background-color: red;
+        }
+      }
+    }
+  }
+
+  &__sublink {
+    font-size: toRem(18);
+    line-height: 158%;
+    color: #383838;
+
+    transition: color 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #ffbc0f;
+      }
+    }
+
+    &[data-spoller] {
+      display: flex;
+      align-items: center;
+      gap: toRem(5);
+
+      &::after {
+        content: "\e900";
+        @extend %ic;
+        font-size: toRem(8);
+        transform: rotate(-90deg);
+        transition: transform 0.3s ease 0s;
+      }
+
+      @media (max-width: $mobile) {
+        // width: 100%;
+        // display: flex;
+        // justify-content: space-between;
+
+        &::after {
+          font-size: toRem(14);
+        }
+      }
+
+      &._spoller-active {
+        color: #ffbc0f;
+        @media (max-width: $mobile) {
+          &::after {
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
+  }
+
+  &__sublist-sub {
+    @media (min-width: $mobile) {
+      position: absolute;
+      top: 0;
+      left: calc(100% + toRem(20));
+      width: 100%;
+      pointer-events: none;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.3s ease 0s;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+      padding: toRem(10);
+    }
+    @media (max-width: $mobile) {
+      padding-left: toRem(15);
+      border-left: 3px solid #ffbc0f;
+    }
+  }
+
+  &__subitem-sub {
     &:not(:last-child) {
       margin-bottom: toRem(5);
     }
   }
 
-  &__sublink {
+  &__sublink-sub {
     font-size: toRem(18);
     line-height: 158%;
     color: #383838;
