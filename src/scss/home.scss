@@ -583,3 +583,93 @@
     }
   }
 }
+
+//========================================================================================================================================================
+
+.directions {
+  @include adaptiveValue("padding-top", 100, 30);
+  @include adaptiveValue("padding-bottom", 100, 30);
+
+  &__container {
+  }
+
+  &__title {
+    text-align: center;
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 60, 30);
+    }
+  }
+
+  &__items {
+    display: grid;
+    @include adaptiveValue("gap", 20, 15);
+
+    @media (min-width: $mobile) {
+      grid-template-columns: repeat(auto-fill, minmax(toRem(350), 1fr));
+    }
+  }
+
+  &__item {
+  }
+}
+
+.item-directions {
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+
+  @include adaptiveValue("padding-top", 30, 20);
+  @include adaptiveValue("padding-bottom", 30, 20);
+  @include adaptiveValue("padding-left", 30, 15, 0, 1430, 767);
+  @include adaptiveValue("padding-right", 30, 15, 0, 1430, 767);
+
+  &__bg-ibg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__circle {
+    background-color: #ffbc0f;
+    border-radius: 50%;
+    @include adaptiveValue("width", 70, 50);
+    @include adaptiveValue("height", 70, 50);
+    @include adaptiveValue("margin-bottom", 20, 15);
+  }
+
+  &__title {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 24, 18);
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #fff;
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 20, 15);
+    }
+  }
+
+  &__text {
+  }
+
+  &__link {
+    font-weight: 600;
+    @include adaptiveValue("font-size", 20, 16);
+    line-height: 120%;
+    color: #fff;
+    display: block;
+
+    transition: color 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #ffbc0f;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: toRem(3);
+    }
+  }
+}
